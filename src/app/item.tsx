@@ -18,7 +18,7 @@ const Item = ({cv}: Props) => {
   return (
       <div className="border rounded-md p-4 flex flex-col">
           <h2 className="text-sm">ID: {cv.id}</h2>
-          <h1>{cv.techno}</h1>
+          <h1>Techno: {cv.techno}</h1>
           <p>{cv.moamoe}</p>
           <p>{cv.profil}</p>
           <p>{cv.prenom}</p>

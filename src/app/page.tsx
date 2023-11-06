@@ -5,7 +5,7 @@ import Item from "./item";
 const prisma = new PrismaClient()
 
 const getCvs = async() => {
-  const res = await fetch(process.env.BASE_URL+'/api/cv',{next:{revalidate:0}})
+  const res = await fetch(process.env.BASE_URL+'/api/resume',{next:{revalidate:0}})
   const json = await res.json()
   return json
 }
