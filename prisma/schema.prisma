@@ -1,0 +1,34 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Cv {
+    id        Int      @id @default(autoincrement())
+    techno     String   @db.VarChar(255)
+    moamoe     String   @db.VarChar(255)
+    profil     String   @db.VarChar(255)
+    prenom     String   @db.VarChar(255)
+    nom      String   @db.VarChar(255)
+    email     String   @db.VarChar(255)
+    annee     String   @db.VarChar(255)
+    telephone     String   @db.VarChar(255)
+    conacte   Boolean  @default(false)
+    disponibilite Boolean  @default(false)
+    typeContrat String   @db.VarChar(255) @default("")
+    fourchette String   @db.VarChar(255) @default("")
+    mobilite String   @db.VarChar(255) @default("")
+    statue String   @db.VarChar(255) @default("")
+    commentaire   String?
+    source String   @db.VarChar(255)
+    localisation String   @db.VarChar(255)
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
